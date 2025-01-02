@@ -2,7 +2,7 @@
 title: "Jacob Earl's Curriculum Vitae (CV)"
 author: Jake Earl
 date: "`r Sys.Date()`"
-knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
+#knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
 output:
   pagedown::html_resume:
     css: ['css/styles.css', 'resume']
@@ -49,7 +49,7 @@ if(PDF_EXPORT){
 Aside
 ================================================================================
 
-![logo](/Users/jake/Desktop/R_Files/Personal/GitHub/CV/Headshot_23.png){width=100%}
+![logo](/Users/jake/Desktop/Headshots/Headshot_23.png){width=100%}
 
 
 Contact Info {#contact}
