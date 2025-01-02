@@ -1,0 +1,204 @@
+---
+title: "Jacob Earl's Curriculum Vitae (CV)"
+author: Jake Earl
+date: "`r Sys.Date()`"
+#knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(glue)
+library(tidyverse)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that are inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R') # Functions for building sections from CSV data
+source('common_variables.R')  # Small variables for non-csv data such as intro text
+
+# Load csv with position info
+position_data <- read_csv('positions.csv')
+```
+
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
+
+Aside
+================================================================================
+
+![logo](/Users/jake/Desktop/R_Files/Personal/GitHub/CV/Headshot_23.png){width=100%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> j.earl2325@outlook.com
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/jake-earl](https://www.linkedin.com/in/jake-earl)
+- <i class="fa fa-github"></i> [github.com/jakearl](https://www.github.com/jakearl)
+- <i class="fa fa-phone"></i> (801) 608-5538
+
+
+Areas of Experience {#experience}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-chart-line"></i> Health Economics Research
+- <i class="fa fa-users"></i> Payor / Formulary
+- <i class="fa fa-prescription"></i> Clinical
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "R",                  3,
+  "SAS",                2,
+  "SQL",                2,
+  "VBA",                1.5
+)
+
+build_bars(skills)
+```
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+Last updated on `r Sys.Date()`.
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("View this CV online with links at _nickstrayer.me/cv_")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/jakearl/CV/blob/main/CV.pdf)")
+}
+```
+
+
+Main
+================================================================================
+
+Jake Earl {#title}
+--------------------------------------------------------------------------------
+
+
+```{r}
+intro_text <- "Pharmacist (PharmD), and Health Economist (MS) with clinical and payor experience and in-depth training in Health Economics and Outcomes Research (HEOR). 
+
+I have experience working for a Managed Care Organization, have built various economic models, and have conceptualized and conducted multiple Real-World Evidence (RWE) studies with claims data. I thoroughly enjoy health economics and strive to generate meaningful research that depicts a clear and impactful message.
+
+I am currently searching for a position in HEOR that allows me to lead teams in utilizing innovative techniques to generate impactful RWE. 
+"
+
+cat(sanitize_links(intro_text))
+```
+
+
+
+Education {data-icon=graduation-cap}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+
+Industry Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'industry_experience')
+```
+
+
+
+
+Research Publications {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+::: aside
+**Types of Research Executed**
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "Real-World Evidence",              4.5,
+  "Economic Modeling",                3.5,
+  "Literature Review",                1
+)
+
+build_bars(skills)
+```
+
+<br>
+<br>
+<br>
+**Therapeutic Area Exposure**
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "Cardiovascular",         4.0,
+  "Oncology",               2.5,
+  "Immunology",             1,
+  "Neurology",              0.5,
+  "Rare Disease",           0.5
+)
+
+build_bars(skills)
+```
+:::
+
+```{r}
+print_section(position_data, 'research_publications')
+```
+
+
+
+Posters & Conference Presentations {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'teaching_experience')
+```
+
+
+Leadership Experience {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'leadership_experience')
+```
+
+
+
+References Available Upon Request  {data-icon=address-book}
+--------------------------------------------------------------------------------
