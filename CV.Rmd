@@ -2,7 +2,7 @@
 title: "Jacob Earl's Curriculum Vitae (CV)"
 author: Jake Earl
 date: "`r Sys.Date()`"
-#knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
+knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
 output:
   pagedown::html_resume:
     css: ['css/styles.css', 'resume']
