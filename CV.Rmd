@@ -55,7 +55,7 @@ Aside
 Contact Info {#contact}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-envelope"></i> j.earl2325@outlook.com
+- <i class="fa fa-envelope"></i> jake.c.earl@outlook.com
 - <i class="fa fa-linkedin"></i> [linkedin.com/in/jake-earl](https://www.linkedin.com/in/jake-earl)
 - <i class="fa fa-github"></i> [github.com/jakearl](https://www.github.com/jakearl)
 - <i class="fa fa-phone"></i> (801) 608-5538
