@@ -22,6 +22,9 @@ library(tidyverse)
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
 
+# Set to true to have pdf link
+PDF_link <- TRUE
+
 # Holds all the links that are inserted for placement at the end
 links <- c()
 
@@ -95,10 +98,10 @@ Last updated on `r Sys.Date()`.
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
-if(PDF_EXPORT){
-  cat("View this CV online with links at _nickstrayer.me/cv_")
-} else {
+if(PDF_link){
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/jakearl/CV/blob/main/CV.pdf)")
+} else {
+  cat("View this CV online with links at jakearl/cv_")
 }
 ```
 
