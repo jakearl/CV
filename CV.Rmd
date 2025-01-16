@@ -149,6 +149,10 @@ Research Publications {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ::: aside
+**ORCID**
+<i class="fab fa-orcid"></i> [0000-0003-1650-9277](https://orcid.org/0000-0003-1650-9277)
+
+<br>
 **Types of Research Executed**
 ```{r}
 skills <- tribble(
@@ -161,7 +165,6 @@ skills <- tribble(
 build_bars(skills)
 ```
 
-<br>
 <br>
 <br>
 **Therapeutic Area Exposure**
