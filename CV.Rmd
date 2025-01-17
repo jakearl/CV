@@ -143,12 +143,8 @@ print_section(position_data, 'industry_experience')
 ```
 
 
-
-
-Research Publications {data-icon=newspaper}
---------------------------------------------------------------------------------
-
 ::: aside
+
 **ORCID**
 <i class="fab fa-orcid"></i> [0000-0003-1650-9277](https://orcid.org/0000-0003-1650-9277)
 
@@ -181,6 +177,11 @@ skills <- tribble(
 build_bars(skills)
 ```
 :::
+
+Research Publications {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+
 
 ```{r}
 print_section(position_data, 'research_publications')
