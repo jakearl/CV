@@ -23,7 +23,7 @@ library(tidyverse)
 PDF_EXPORT <- FALSE
 
 # Set to true to have pdf link
-PDF_link <- FALSE
+PDF_link <- TRUE
 
 # Holds all the links that are inserted for placement at the end
 links <- c()
@@ -180,8 +180,6 @@ build_bars(skills)
 
 Research Publications {data-icon=newspaper}
 --------------------------------------------------------------------------------
-
-
 
 ```{r}
 print_section(position_data, 'research_publications')
