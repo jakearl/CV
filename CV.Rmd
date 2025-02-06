@@ -2,7 +2,7 @@
 title: "Jacob Earl's Curriculum Vitae (CV)"
 author: Jake Earl
 date: "`r Sys.Date()`"
-#knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
+knit: pagedown::chrome_print # comment to save as HTML, uncomment for PDF
 output:
   pagedown::html_resume:
     css: ['css/styles.css', 'resume']
@@ -114,11 +114,9 @@ Jake Earl {#title}
 
 
 ```{r}
-intro_text <- "Pharmacist (PharmD), and Health Economist (MS) with clinical and payor experience and in-depth training in Health Economics and Outcomes Research (HEOR). 
+intro_text <- "Pharmacist (PharmD), and Health Economist (MS) with clinical and payor expertise and in-depth training in Health Economics and Outcomes Research (HEOR). 
 
-I have experience working for a Managed Care Organization, have built various economic models, and have conceptualized and conducted multiple Real-World Evidence (RWE) studies with claims data. I thoroughly enjoy health economics and strive to generate meaningful research that depicts a clear and impactful message.
-
-I am currently searching for a position in HEOR that allows me to lead teams in utilizing innovative techniques to generate impactful RWE. 
+I have worked for a Managed Care Organization, a research hospital, and a large pharmaceutical company. I have built and analyzed various economic models and conducted various Real-World Evidence (RWE) studies utilizing claims data. My knowledge is always growing and includes biostatistics, epidemiology, and coding with R, SAS, SQL, and VBA. My goal is to generate impactful research that depicts a clear message and ultimately become a leader within my field.
 "
 
 cat(sanitize_links(intro_text))
