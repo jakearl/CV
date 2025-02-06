@@ -52,7 +52,7 @@ if(PDF_EXPORT){
 Aside
 ================================================================================
 
-![logo](/Users/jake/Desktop/Headshots/Headshot_23.png){width=100%}
+![logo](/Users/jake/Desktop/Headshots/Headshots_Compressed/Headshot_compressed.png){width=100%}
 
 
 Contact Info {#contact}
