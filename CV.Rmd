@@ -163,7 +163,7 @@ build_bars(skills)
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "Cardiovascular",         4.0,
+  "Cardiovascular",         5.0,
   "Oncology",               2.5,
   "Immunology",             1,
   "Neurology",              0.5,
