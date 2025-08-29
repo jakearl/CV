@@ -114,9 +114,9 @@ Jake Earl {#title}
 
 
 ```{r}
-intro_text <- "Pharmacist (PharmD), and Health Economist (MS) with clinical and payor expertise and in-depth training in Health Economics and Outcomes Research (HEOR). 
+intro_text <- "Pharmacist (PharmD) with clinical and payor expertise, and Health Economist (MS) with in-depth training in Health Economics and Outcomes Research (HEOR). 
 
-I have worked for a Managed Care Organization, a research hospital, and a large pharmaceutical company. I have built and analyzed various economic models and conducted various Real-World Evidence (RWE) studies utilizing claims data. My knowledge is always growing and includes biostatistics, epidemiology, and coding with R, SAS, SQL, and VBA. My goal is to generate impactful research that depicts a clear message and ultimately become a leader within my field.
+I have worked for a Managed Care Organization, a research hospital, and multiple pharmaceutical companies. I have conducted various Real-World Evidence (RWE) studies utilizing advanced methods tailored to the aims, and have built and analyzed various economic models. My expertise includes biostatistics, epidemiology, modeling, and coding in multiple languages. My goal is to become a leader within my field by generating impactful research that depicts a clear message.
 "
 
 cat(sanitize_links(intro_text))
